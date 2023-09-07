@@ -1,0 +1,30 @@
+<html>
+
+    <head>
+        <title>Mini-Loan App</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/home.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <script src="/js/navbar.js" defer></script>
+    </head>
+
+    <body>
+        <%- include('../includes/navbar.ejs') %>
+        <header>
+
+            <%- include('../includes/welcome-msg.ejs') %>
+        </header>
+        <main>
+
+            <%- include('../includes/create-loan.ejs') %>
+
+            <div class="loan-check">
+                <button>
+                    <a href="/loans">Check your Loans status and history </a>
+                </button>
+            </div>
+        </main>
+
+    </body>
+
+</html>

@@ -1,0 +1,78 @@
+header {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 900px;
+  p {
+    font-size: 2rem;
+    b {
+      text-transform: capitalize;
+    }
+  }
+}
+
+main {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 900px;
+  border: 2px solid #efefef;
+  margin: 1rem auto;
+  overflow-x: scroll;
+  font-size: 1.2rem;
+  button {
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    background-color: #660000;
+    &:hover {
+      opacity: 0.7;
+    }
+    a {
+      color: #efefef;
+      font-weight: 900;
+      text-decoration: none;
+    }
+    .disable-link {
+      text-decoration: none;
+      cursor: not-allowed;
+    }
+  }
+  button.disable-btn {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  table {
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+    .approved{
+      color: green;
+     font-weight: 900;
+     }
+     .pending{
+       color: #FFAA33;
+       font-weight: 900;
+     }
+     .paid{
+       color:#002244;
+       font-weight: 900;
+     }
+
+    th {
+      background-color: #0038ba;
+      padding: 15px 10px;
+      color: #fff;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+    td {
+      text-transform: capitalize;
+      padding: 10px;
+      text-align: center;
+    }
+    tr {
+      background-color: #F0F0F0;
+    }
+  }
+}

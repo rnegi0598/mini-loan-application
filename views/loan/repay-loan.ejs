@@ -1,0 +1,57 @@
+<html>
+
+<head>
+  <title>Reapy Loans</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/repay-loans.css">
+</head>
+
+<body>
+
+  <%- include('../includes/navbar.ejs') %>
+
+  <header>
+    <p><b><%= name %>'s</b> loan repayment status and history</p>
+  </header>
+  <main>
+    <div class="add-repayment">
+      <form action="/loans/repay/<%=id%>" method="post">
+        <div> 
+            <label for="amount">Repayment Amount</label>
+            <input type="number" step="any" id="amount"  name="amount" min="1" max="<%= remainingAmount %>" required>
+        </div>
+        <button type="submit">Repay</button>
+      </form>
+      
+    </div>
+
+    <div class="repayment-summary">
+        <h2>Repayment Summary</h2>
+        <table cellspacing="0">
+            <tr>    
+                <th>Week </th>
+                <th>Amount </th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+          
+            <% repayments.forEach((record,ind)=>{%>
+                <tr class=<%=record.status==="paid"?"paid-record":"" %>>
+                    <td> <%= ind+1 %></td>
+                    <td> <%= record.amount %></td>
+                    <td class="<%=record.status  %>"> <%= record.status %></td>
+                    <td> <%= record.date.toDateString() %></td>
+                </tr>
+            <%}) %>
+          
+        </table>
+    </div>
+
+  </main>
+
+
+
+</body>
+
+</html>

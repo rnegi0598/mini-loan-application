@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/auth.css">
+</head>
+
+<body>
+  <div class="auth-wrapper">
+    <div class="left-side">
+      <div class="title">
+        <h1> Introducing </h1>
+        <h1>Our Mini-Loan App</h1>
+      </div>
+      <p>Are you ready to unlock financial freedom and seize life's opportunities? </p>
+      <p>Look no further than our Mini-Loan App! </p>
+
+      <p>Welcome to a world of financial flexibility, where your aspirations become reality.</p>
+      <p> Join us today and take the first step towards a brighter, more prosperous future with the Mini-Loan App.</p>
+
+    </div>
+    <div class="right-side">
+      <div class="sign-up-title">
+        <h2>Get Started</h2>
+        <p>Create you account now</p>
+      </div>
+      <form action="/auth/sign-up" method="post">
+        <div class="name-wrapper">
+          <label for="username">Full name</label>
+          <input type="text" id="username" name="name" required>
+        </div>
+
+        <div class="email-wrapper">
+          <label for="useremail">Email</label>
+          <input type="email" id="useremail" name="email" required>
+        </div>
+
+        <div class="password-wrapper">
+          <label for="userpassword">Password</label>
+          <input type="password" id="userpassword" name="password" required>
+        </div>
+        <div class="submit-btn-wrapper">
+          <button type="submit">Create Account</button>
+        </div>
+      </form>
+      <div>
+        <p>Have an account ? <a href="/auth/sign-in">Sign In</a></p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

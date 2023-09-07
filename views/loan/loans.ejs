@@ -1,0 +1,52 @@
+<html>
+
+    <head>
+        <title>Loans</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/loans.css">
+    </head>
+    <body>
+
+        <%- include('../includes/navbar.ejs') %>
+
+        <header>
+            <p><b><%= name %>'s</b> loan status and history</p>
+        </header>
+        <main>
+            <table cellspacing="0">
+                <tr>    
+                    <th>Type </th>
+                    <th>Amount </th>
+                    <th>Term</th>
+                    <th>Status</th>
+                    <th title="Loan Application Date">Date</th>
+                    <th>Actions</th>
+                
+                </tr>
+              
+                <% loans.forEach((record)=>{%>
+                    <tr>
+                        <td> <%= record.type %></td>
+                        <td> <%= record.amount %></td>
+                        <td> <%= record.term %></td>
+                        <td class="<%=record.status%> "> <%= record.status %></td>
+                        <td> <%= record.date.toDateString() %></td>
+                     
+                        <td>
+                            <% if(record.status == "pending" || record.status==="paid"){%>
+                            <button class="disable-btn"><a  class="disable-link" href="/loans/repay/<%=record._id%>">Repay</a></button>
+                            <%}else{%>
+                            <button><a href="/loans/repay/<%=record._id%>">Repay</a></button>
+                            <%} %>
+                        </td>
+                    </tr>
+                <%}) %>
+              
+            </table>
+        </main>
+
+        
+        
+    </body>
+</html>

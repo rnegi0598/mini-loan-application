@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Admin</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="/css/navbar.css">
+        <link rel="stylesheet" href="/css/admin.css">
+    </head>
+    <body>
+      
+        <%- include('../includes/navbar.ejs') %>
+
+        <header>
+            <p>Admin</p>
+        </header>
+        <main>
+            <table cellspacing="0">
+                <tr>    
+                    <th>User Name </th>
+                    <th>Loan Type </th>
+                    <th>Loan Amout</th>
+                    <th>Loan Term</th>
+                    <th>Loan Date</th>
+                    <th>Loan Status</th>
+                    <th>Actions</th>
+                
+                </tr>
+              
+                <% loans.forEach((record)=>{%>
+                    <tr>
+                        <td> <%= record.user.name %></td>
+                        <td> <%= record.type %></td>
+                        <td> <%= record.amount %></td>
+                        <td> <%= record.term %></td>
+                        <td> <%= record.date.toDateString() %></td>
+                        <td class="<%=record.status  %>"> <%= record.status %></td>
+                        <td>
+                            <% if(record.status !== "pending"){%>
+                           <button class="disable-btn"> <a  class="disable-link" href="/admin/approv/<%=record._id%>">Approv</a></button>
+                            <%}else{%>
+                           <button> <a  class="jlk" href="/admin/approv/<%=record._id%>">Approv</a></button>
+                            <%} %>
+                        </td>
+                    </tr>
+                <%}) %>
+              
+            </table>
+        </main>
+    </body>
+</html>

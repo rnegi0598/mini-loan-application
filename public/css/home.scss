@@ -1,0 +1,121 @@
+header {
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 0 1rem;
+
+  .welcome-msg {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 50px;
+
+    h2 {
+      color: #1B1212;
+      color: #D8D8D8;
+      margin: 1rem 0;
+      font-weight: 900;
+      font-size: 2rem;
+      
+      b {
+        text-transform: uppercase;
+      }
+    }
+    p {
+      color: #353935;
+      color: #D8D8D8;
+      line-height: 1.5rem;
+      font-weight: 900;
+      b {
+        text-transform: capitalize;
+      }
+    }
+    p:first-of-type{
+      font-weight: 600;
+      margin: 0.5em 0;
+    }
+   
+  }
+  .right::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -20px;
+    right: -20px;
+    bottom: 0;
+    background: url("/images/blob-bg.svg");
+
+  }
+}
+main {
+  margin: 10px auto;
+  max-width: 800px;
+  padding: 0 1rem;
+
+  .create-loan-wrapper {
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 60px;
+    h2 {
+      margin: 1em 0;
+    }
+    form {
+      display: flex;
+      align-items: flex-end;
+      gap: 20px;
+      font-size: 1.2rem;
+
+      label {
+        display: block;
+      }
+      input {
+        outline: none;
+        border-radius: 5px;
+        width: 80%;
+        max-width: 400px;
+        height: 40px;
+        font-size: 1.2rem;
+        padding: 10px;
+      }
+      button {
+        outline: none;
+        height: 50px;
+        width: 180px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        background-color: #0038ba;
+        color: #dfdfdf;
+        font-weight: 900;
+
+        &:hover{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .loan-check {
+    margin: 3em 0;
+    button {
+      outline: none;
+      height: 50px;
+      width: 400px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      background-color: #001122;
+      color: #fff;
+      font-weight: 900;
+      &:hover{
+        opacity: 0.8;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+}

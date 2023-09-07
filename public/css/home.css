@@ -1,0 +1,113 @@
+header {
+  margin: 50px auto;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+header .welcome-msg {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+header .welcome-msg h2 {
+  color: #1B1212;
+  color: #D8D8D8;
+  margin: 1rem 0;
+  font-weight: 900;
+  font-size: 2rem;
+}
+header .welcome-msg h2 b {
+  text-transform: uppercase;
+}
+header .welcome-msg p {
+  color: #353935;
+  color: #D8D8D8;
+  line-height: 1.5rem;
+  font-weight: 900;
+}
+header .welcome-msg p b {
+  text-transform: capitalize;
+}
+header .welcome-msg p:first-of-type {
+  font-weight: 600;
+  margin: 0.5em 0;
+}
+header .right::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -20px;
+  right: -20px;
+  bottom: 0;
+  background: url("/images/blob-bg.svg");
+}
+
+main {
+  margin: 10px auto;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+main .create-loan-wrapper {
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 60px;
+}
+main .create-loan-wrapper h2 {
+  margin: 1em 0;
+}
+main .create-loan-wrapper form {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  font-size: 1.2rem;
+}
+main .create-loan-wrapper form label {
+  display: block;
+}
+main .create-loan-wrapper form input {
+  outline: none;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+  height: 40px;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+main .create-loan-wrapper form button {
+  outline: none;
+  height: 50px;
+  width: 180px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  background-color: #0038ba;
+  color: #dfdfdf;
+  font-weight: 900;
+}
+main .create-loan-wrapper form button:hover {
+  opacity: 0.8;
+}
+main .loan-check {
+  margin: 3em 0;
+}
+main .loan-check button {
+  outline: none;
+  height: 50px;
+  width: 400px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  background-color: #001122;
+  color: #fff;
+  font-weight: 900;
+}
+main .loan-check button:hover {
+  opacity: 0.8;
+}
+main .loan-check a {
+  text-decoration: none;
+  color: inherit;
+}/*# sourceMappingURL=home.css.map */

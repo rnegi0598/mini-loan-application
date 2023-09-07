@@ -1,0 +1,76 @@
+header {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 900px;
+}
+header p {
+  font-size: 2rem;
+}
+header p b {
+  text-transform: capitalize;
+}
+
+main {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 900px;
+  border: 2px solid #efefef;
+  margin: 1rem auto;
+  overflow-x: scroll;
+  font-size: 1.2rem;
+}
+main button {
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: #660000;
+}
+main button:hover {
+  opacity: 0.7;
+}
+main button a {
+  color: #efefef;
+  font-weight: 900;
+  text-decoration: none;
+}
+main button .disable-link {
+  text-decoration: none;
+  cursor: not-allowed;
+}
+main button.disable-btn {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+main table {
+  margin: auto;
+  width: 100%;
+  max-width: 1000px;
+}
+main table .approved {
+  color: green;
+  font-weight: 900;
+}
+main table .pending {
+  color: #FFAA33;
+  font-weight: 900;
+}
+main table .paid {
+  color: #002244;
+  font-weight: 900;
+}
+main table th {
+  background-color: #0038ba;
+  padding: 15px 10px;
+  color: #fff;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+main table td {
+  text-transform: capitalize;
+  padding: 10px;
+  text-align: center;
+}
+main table tr {
+  background-color: #F0F0F0;
+}/*# sourceMappingURL=admin.css.map */
